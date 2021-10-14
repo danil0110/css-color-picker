@@ -1,79 +1,80 @@
 * {
-	font-family: 'Fira Code', monospace;
-	color: white;
-	font-size: 36px;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  font-family: 'Fira Code', monospace;
+  color: white;
+  font-size: 36px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	transition: 0.2s background-color ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s background-color ease;
 }
 
 main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .css-color {
-	width: 850px;
-	border-radius: 5px;
-	padding: 10px 20px;
-	color: #aaa;
-	background-color: #222;
-	box-shadow: 0 0 20px rgba(20, 20, 20, 0.7);
+  width: 850px;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: #aaa;
+  background-color: #222;
+  box-shadow: 0 0 20px rgba(20, 20, 20, 0.7);
+  cursor: pointer;
 }
 
 .color-type {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 button {
-	padding: 10px 30px;
-	border-radius: 5px;
-	border: none;
-	outline: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
 }
 
 button:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 #btn-generate {
-	font-size: 42px;
-	margin-top: 75px;
-	background-color: rgb(0, 89, 255);
-	box-shadow: 0 0 10px rgba(0, 89, 255, 1);
-	transition: 0.1s background-color ease;
+  font-size: 42px;
+  margin-top: 75px;
+  background-color: rgb(0, 89, 255);
+  box-shadow: 0 0 10px rgba(0, 89, 255, 1);
+  transition: 0.1s background-color ease;
 }
 
 #btn-generate:hover {
-	background-color: rgb(21, 103, 255);
+  background-color: rgb(21, 103, 255);
 }
 
 #btn-generate:active {
-	background-color: rgb(35, 112, 255);
+  background-color: rgb(35, 112, 255);
 }
 
 .color-type button {
-	font-size: 18px;
-	background-color: #222;
-	padding: 10px 20px;
-	transition: 0.2s all ease;
+  font-size: 18px;
+  background-color: #222;
+  padding: 10px 20px;
+  transition: 0.2s all ease;
 }
 
 .color-type button.active {
-	background-color: rgb(0, 89, 255);
-	box-shadow: 0 0 10px rgba(0, 89, 255, 1);
+  background-color: rgb(0, 89, 255);
+  box-shadow: 0 0 10px rgba(0, 89, 255, 1);
 }
