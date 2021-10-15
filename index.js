@@ -4,6 +4,9 @@ const cssColorBlock = document.querySelector('.css-color');
 const colorField = cssColorBlock.querySelector('span');
 const btnTypeHex = document.querySelector('#type-hex');
 const btnTypeRgb = document.querySelector('#type-rgb');
+const notificationBlock = document.querySelector('.notification');
+const notificationCloseBtn = notificationBlock.querySelector('button');
+let notificationTimer = null;
 
 let currentColor = [20, 30, 40];
 let colorType = 'rgb';
@@ -41,6 +44,23 @@ const updateBodyBackground = () => {
   body.style.backgroundColor = toHexColor(currentColor);
 };
 
+const showNotification = () => {
+  clearTimeout(notificationTimer);
+  notificationTimer = setTimeout(closeNotification, 3000);
+  if (!notificationBlock.classList.contains('visible')) {
+    return notificationBlock.classList.add('visible');
+  }
+
+  notificationBlock.classList.remove('multiple');
+  void notificationBlock.offsetWidth;
+  notificationBlock.classList.add('multiple');
+};
+
+const closeNotification = () => {
+  notificationBlock.classList.remove('visible', 'multiple');
+  clearTimeout(notificationTimer);
+};
+
 btnGenerate.addEventListener('click', () => {
   currentColor = getRandomColor();
   updateColorField();
@@ -71,8 +91,10 @@ document.addEventListener('keypress', (e) => {
   }
 });
 
+notificationCloseBtn.addEventListener('click', closeNotification);
+
 cssColorBlock.addEventListener('click', (e) => {
   navigator.clipboard
     .writeText(`background-color: ${colorField.textContent}`)
-    .then(() => alert('Copied!'));
+    .then(showNotification);
 });
