@@ -126,3 +126,46 @@ button:hover {
 .notification.multiple {
   animation: flash 1s;
 }
+
+@media (max-width: 921px) {
+  .css-color {
+    width: 600px;
+    font-size: 0.7em;
+  }
+
+  .css-color span {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 671px) {
+  .css-color {
+    width: 450px;
+    font-size: 0.5em;
+  }
+
+  .css-color span {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 500px) {
+  .css-color {
+    width: 350px;
+    font-size: 0.38em;
+  }
+
+  .css-color span {
+    font-size: 1em;
+  }
+
+  #btn-generate {
+    margin-top: 40px;
+    font-size: 0.8em;
+  }
+
+  .notification {
+    width: 250px;
+    font-size: 0.4rem;
+  }
+}
